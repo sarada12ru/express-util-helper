@@ -29,6 +29,6 @@ Express Util Helper is a NPM where you can get
 - ### *`Error Handler`*
     > `const { invalidRoute, universalErrorHandler } = errorHandler;`
 
-    > After all routers
-    > `app.use( invalidRoute )`
+    > After all routers \
+    > `app.use( invalidRoute )` \
     > `app.use( universalErrorHandler )`
