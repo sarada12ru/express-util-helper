@@ -1,12 +1,17 @@
 {
   "name": "express-util-helper",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Express Util Helper with Http Helper & Error Handler",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "Http Helper",
+    "Node Http Helper",
+    "Error Handler",
+    "Node Error Handler"
+  ],
   "author": "Sarada Prasad",
   "license": "ISC",
   "dependencies": {}

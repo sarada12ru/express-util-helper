@@ -19,12 +19,12 @@ Express Util Helper is a NPM where you can get
     > Response in `Object` \
     > e.g. Success :  `{ "success": true, "data": { "name": "Sarada", "age": "22" } }` \
     > e.g. Error :  `{ "success": false, "data": {  }, err : { "message" : "Some error message" } }` \
-    > `app.get( '/', ( req, res ) => { httpHelper( 'ack', res, error, object ); } )`  
+    > `app.get( '/', ( req, res ) => { httpHelper( 'record', res, error, object ); } )`  
     
     > Response in `Array` \
     > e.g. Success :  `{ "success": true, "data": [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ] }` \
     > e.g. Error :  `{ "success": false, "data": [], err : { "message" : "Some error message" } }` \
-    > `app.get( '/', ( req, res ) => { httpHelper( 'ack', res, error, array ); } )`  
+    > `app.get( '/', ( req, res ) => { httpHelper( 'records', res, error, array ); } )`  
 
 - ### *`Error Handler`*
     > `const { invalidRoute, universalErrorHandler } = errorHandler;`
