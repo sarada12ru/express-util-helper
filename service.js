@@ -55,7 +55,17 @@ const errorHandler = {
     universalErrorHandler
 }
 
+const { createToken, verifyToken } = require( './utils/authHelper' );
+
+const authHelper = {
+    createToken,
+    verifyToken
+}
+
 module.exports = {
+
     httpHelper,
-    errorHandler
+    errorHandler,
+    authHelper
+    
 }

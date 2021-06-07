@@ -12,7 +12,20 @@
     "Error Handler",
     "Node Error Handler"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cheeriojs/cheerio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cheeriojs/cheerio/issues"
+  },
+  "homepage": "https://cheerio.js.org/",
   "author": "Sarada Prasad",
   "license": "ISC",
-  "dependencies": {}
+  "dependencies": {
+    "jsonwebtoken": "^8.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
 }
