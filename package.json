@@ -14,12 +14,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/cheeriojs/cheerio.git"
+    "url": "https://github.com/sarada12ru/express-util-helper.git"
   },
   "bugs": {
-    "url": "https://github.com/cheeriojs/cheerio/issues"
+    "url": "https://github.com/sarada12ru/express-util-helper/issues"
   },
-  "homepage": "https://cheerio.js.org/",
   "author": "Sarada Prasad",
   "license": "ISC",
   "dependencies": {
