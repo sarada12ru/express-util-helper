@@ -1,7 +1,7 @@
 const httpHelper = require( './httpHelper' );
 
 const invalidRoute = ( req, res ) => {
-    console.log( 'error >> Request ' + req.path + ' could not be handled by any existing routes.' );
+    // console.log( 'error >> Request ' + req.path + ' could not be handled by any existing routes.' );
 
     res.status( 500 );
 
@@ -16,7 +16,7 @@ const universalErrorHandler = ( err, req, res, next ) => {
     
     }
     
-    console.log( 'error >> Server errorHandler Function :' + err.message );
+    // console.log( 'error >> Server errorHandler Function :' + err.message );
 
     res.status( 500 );
 

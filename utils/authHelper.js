@@ -35,7 +35,7 @@ const createToken = ( data, authentication_secret, validity ) => {
 
     } catch (error) {
 
-        httpHelper.sendAckResponse(res, new Error("Error while generating jwt token."), null);
+        httpHelper.sendAckResponse(res, new Error("Error while generating jwt token."), "");
 
     }
 };
@@ -45,19 +45,23 @@ const verifyToken = ( headers, authentication_secret ) => {
     
     let token = fetch(headers);
 
-    return jwt.verify(token, authentication_secret, function(err, decode) {
-        if (err) {
+    return new Promise( ( resolve, reject ) => {
 
-            httpHelper.sendAckResponse(res, new Error("Invalid token."), null);
+        jwt.verify(token, authentication_secret, function(err, decode) {
+            
+            if (err) {
+    
+                reject( new Error( "Invalid Token" ) )
+    
+            } else {
+    
+                resolve( decode );
+    
+            }
+        });
 
-            return;
+    } )
 
-        } else {
-
-            return decode;
-
-        }
-    });
 };
 
 const fetch = (headers) => {

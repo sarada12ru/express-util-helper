@@ -1,6 +1,7 @@
-const { errorHandler, httpHelper } = require( './service' );
+const { errorHandler, httpHelper, authHelper } = require( './service' );
 
 module.exports = {
     httpHelper,
-    errorHandler
+    errorHandler,
+    authHelper
 }
