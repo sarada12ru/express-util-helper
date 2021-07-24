@@ -36,36 +36,36 @@ Express Helper is a NPM where you can get
 - ### *`JWT Authentication Helper`*
     >  `const { createToken, verifyToken } = authHelper;`
 
-    >  `This authentication function is a middleware to filter authenticate users`
-    >   `const authentication = ( req, res, next ) => {`
-    >   `verifyToken( req.headers, 'secret' )    // "secret" - Secret key to encrypt and decrypt data`
-    >   `.then( data => {`
-    >   `req.authData = data;`
-    >   `next();`
-    >   `} )`
-    >   `.catch( err => {`
-    >   `httpHelper( 'ack', res, err, err.message  );`
-    >   `} )`
-    >   `}`
+    >  `This authentication function is a middleware to filter authenticate users`  <br />
+    >   `const authentication = ( req, res, next ) => {`    <br />
+    >   `verifyToken( req.headers, 'secret' )    // "secret" - Secret key to encrypt and decrypt data`  <br />
+    >   `.then( data => {`<br />
+    >   `req.authData = data;`<br />
+    >   `next();`   <br />
+    >   `} )`   <br />
+    >   `.catch( err => {`  <br />
+    >   `httpHelper( 'ack', res, err, err.message  );`  <br />
+    >   `} )`   <br />
+    >   `}` <br />
     
-    >   `Authentication Methods`
-    >   `# () Generate Authentication Token`
-    >   `app.get( '/generate/token', ( req, res ) => {`
-    >   `let token = createToken( { id : 101 }, "secret", 60 * 60 * 24 )`     
-    >   `// { id : 101 } - This data will encrypted`
-    >   `// "secret" - Secret key to encrypt and decrypt data`
-    >   `// 60 * 60 * 24 = 24 hours = 24 * 3600 seconds`
-    >   `httpHelper( 'record', res, null, { jwtToken : token } )`
-    >   ` } )`
-    >   `# () Validate Authentication Token In A Middleware`
-    >   `app.get( '/verify/token', authentication, ( req, res, next ) => {`
-    >   `let responseData = {`
-    >   `message : "User Authenticated",`
-    >   `authData : {`
-    >   `...req.authData`
-    >   `}`
-    >   `}`
-    >   `httpHelper( 'record', res, null, responseData );`
-    >   `} )`
+    >   `Authentication Methods`    <br />
+    >   `# () Generate Authentication Token`    <br />
+    >   `app.get( '/generate/token', ( req, res ) => {`     <br />
+    >   `let token = createToken( { id : 101 }, "secret", 60 * 60 * 24 )`   <br />  
+    >   `// { id : 101 } - This data will encrypted`    <br />
+    >   `// "secret" - Secret key to encrypt and decrypt data`  <br />
+    >   `// 60 * 60 * 24 = 24 hours = 24 * 3600 seconds`    <br />
+    >   `httpHelper( 'record', res, null, { jwtToken : token } )`   <br />
+    >   ` } )`  <br />
+    >   `# () Validate Authentication Token In A Middleware`    <br />
+    >   `app.get( '/verify/token', authentication, ( req, res, next ) => {`     <br />
+    >   `let responseData = {`      <br />
+    >   `message : "User Authenticated",`       <br />
+    >   `authData : {`      <br />
+    >   `...req.authData`       <br />
+    >   `}`     <br />
+    >   `}`     <br />
+    >   `httpHelper( 'record', res, null, responseData );`      <br />
+    >   `} )`   
     
     `#NB :  Secret key must be same in both encrypt and decrypt case. Otherwise token will not be validated.`
