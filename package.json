@@ -1,6 +1,6 @@
 {
   "name": "express-util-helper",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Express Util Helper with Http Helper, Error Handler and Auth Helper",
   "main": "index.js",
   "scripts": {
